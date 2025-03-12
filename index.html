@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Value 1</title>
+</head>
+<body>
+
+    <!-- get & set value is used for only form(input, button, select, legend, textarea ..... etc)   -->
+    
+    <form action="" id="form">
+        <label for="">First Number </label>
+        <input type="text" placeholder="Number 1" id="num1"><br><br>
+        <label for="">First Number </label>
+        <input type="text" placeholder="Number 2" id="num2"><br><br>
+        <label for="">Result  </label>
+        <input type="text" id="res" placeholder="Result" disabled><br><br>
+    </form>
+        <button onclick="addition()" id="addi" value="Result">Sum</button>
+        <button onclick="multiply()" id="multi" value="Result">Product</button>
+        <button onclick="division()" id="divi" value="Result">Division</button>
+    <script>
+        var w = document.getElementById("form");
+        var x = document.getElementById("num1");
+        var y = document.getElementById("num2");
+        var z = document.getElementById("res");
+
+        x.style.width="80px";
+        x.style.height="20px";
+        x.style.textAlign="center";
+
+        y.style.width="80px";
+        y.style.height="20px";
+        y.style.textAlign="center";
+
+        z.style.width="82px";
+        z.style.height="20px";
+        z.style.textAlign="center";
+        z.style.transform="translate(45px, 0px)";
+        z.style.border="1px solid black";
+        z.style.borderRadius="2px";
+        z.style.padding="2px";
+
+        function addition(){
+            var  n1 = parseInt(document.getElementById("num1").value);   // getting value
+            var  n2 = parseInt(document.getElementById("num2").value);   // getting value
+            var result = document.getElementById("res").value=(n1 + n2); // setting value
+        }
+        function multiply(){
+            var  n1 = parseInt(document.getElementById("num1").value);   // getting value
+            var  n2 = parseInt(document.getElementById("num2").value);   // getting value
+            var result = document.getElementById("res").value=(n1*n2); // setting value
+        }
+        function division(){
+            var  n1 = parseInt(document.getElementById("num1").value);   // getting value
+            var  n2 = parseInt(document.getElementById("num2").value);   // getting value
+            var result = document.getElementById("res").value=(n1/n2); // setting value
+        }
+    </script>
+</body>
+</html>
